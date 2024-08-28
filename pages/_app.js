@@ -1,8 +1,7 @@
-import Head from 'next/head'
-import '../styles/globals.css'
-import { AppProps } from 'next/app'
+import Head from 'next/head';
+import '../styles/globals.css';
 
-export default function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
@@ -14,7 +13,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         />
         <meta name="description" content="Description" />
         <meta name="keywords" content="Keywords" />
-        <title>Laconic Test PWA</title>
+        <title>Checkbox Mania</title>
 
         <link rel="manifest" href="/manifest.json" />
         <link
@@ -29,10 +28,12 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           type="image/png"
           sizes="32x32"
         />
-        <link rel="apple-touch-icon" href="/apple-icon.png"></link>
+        <link rel="apple-touch-icon" href="/apple-icon.png" />
         <meta name="theme-color" content="#317EFB" />
       </Head>
       <Component {...pageProps} />
     </>
-  )
+  );
 }
+
+export default MyApp;

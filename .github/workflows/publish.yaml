@@ -8,7 +8,7 @@ on:
       - '*'
 
 env:
-  CERC_REGISTRY_USER_KEY: ${{ secrets.CICD_LACONIC_USER_KEY }}
+  CERC_REGISTRY_USER_KEY: ${{ secrets.CICD_LACONIC_USER_KEY }} #private key with hexadecimal removed (0x)
   CERC_REGISTRY_BOND_ID: ${{ secrets.CICD_LACONIC_BOND_ID }}
 
 jobs:
