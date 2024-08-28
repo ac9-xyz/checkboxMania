@@ -11,6 +11,7 @@ CERC_REPO_REF=${CERC_REPO_REF:-${GITHUB_SHA:-`git log -1 --format="%H"`}}
 CERC_IS_LATEST_RELEASE=${CERC_IS_LATEST_RELEASE:-"true"}
 
 rcd_name=$(jq -r '.name' package.json | sed 's/null//')
+rcd_shortname=$(echo "$rcd_name" | sed 's|.*/||')
 rcd_desc=$(jq -r '.description' package.json | sed 's/null//')
 rcd_repository=$(jq -r '.repository' package.json | sed 's/null//')
 rcd_homepage=$(jq -r '.homepage' package.json | sed 's/null//')
@@ -96,7 +97,7 @@ record:
   version: 1.0.0
   name: "$rcd_name@$rcd_app_version"
   application: "$CERC_REGISTRY_APP_CRN@$rcd_app_version"
-  dns: "$CERC_REGISTRY_DEPLOYMENT_SHORT_HOSTNAME"
+  dns: "$rcd_shortname"
   deployment: "$CERC_REGISTRY_DEPLOYMENT_CRN"
   to: $CERC_REGISTRY_DEPLOYMENT_REQUEST_PAYMENT_TO
   payment: $PAYMENT_TX
