@@ -2,7 +2,7 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 
 const hello = (req: NextApiRequest, res: NextApiResponse) => {
-  res.status(200).json({ Message: 'Hello World from Cosmos :D' })
+  res.status(200).json({ Message: 'Hello World from Cosmos :D !!' })
 }
 
 export default hello
