@@ -1,7 +1,7 @@
 {
   "private": true,
-  "name": "@cosmosspacesapp/checkboxMania",
-  "version": "0.1.1",
+  "name": "@cosmosspacesapp/Checkbox_Mania",
+  "version": "0.1.2",
   "repository": "https://github.com/ac9-xyz/checkboxMania.git",
   "scripts": {
     "dev": "next dev",
